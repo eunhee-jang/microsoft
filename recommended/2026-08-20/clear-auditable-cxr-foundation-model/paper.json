@@ -1,0 +1,15 @@
+{
+  "id": "clear-auditable-cxr-foundation-model",
+  "title": "CLEAR: an auditable foundation model for radiology grounded in clinical concepts",
+  "authors": ["Tianyu Han", "Riga Wu", "Yu Tian", "Firas Khader", "Lisa C. Adams", "Keno K. Bressem", "Christos Davatzikos", "Jakob Nikolas Kather", "Li Shen", "David A. Mankoff", "Eduardo Mortani Barbosa", "Daniel Truhn"],
+  "venue": "Nature Biomedical Engineering",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41551-026-01741-4",
+  "abstract": "'Black box' deep learning models for medical image interpretation limit clinical trust and analysis of performance degradation. Here we introduce Concept-Level Embeddings for Auditable Radiology (CLEAR), an auditable foundation model based on clinical concepts. Trained on over 0.87 million image-report pairs from 239,391 patients, CLEAR learns a visual representation and projects chest X-rays into a semantically rich space defined by large language model embeddings, making every prediction decomposable into weighted contributions from individual radiological observations. External validation on four large, physician-annotated datasets from the United States, Europe and Asia shows that CLEAR not only achieves state-of-the-art classification performance but also enables applications: auditable zero-shot pathology detection, systematic identification of radiological confounders and the creation of expert-level concept bottleneck models from data-driven concepts. By integrating clinical knowledge directly into its reasoning process, CLEAR offers a framework for robust model auditing, safer deployment and enhanced physician-AI collaboration, advancing towards trustworthy medical AI.",
+  "axes": ["기관 간 일반화", "다중 라벨 소견 해석가능성"],
+  "takeaway": "대규모 image-report 쌍으로 학습한 개념 기반 흉부 X-ray 파운데이션 모델이 4개 대륙의 독립 코호트에서 최고 수준의 분류 성능과 예측 근거 설명력을 동시에 달성했다.",
+  "relevance": "우리 코호트는 272건, 153명 규모의 단일 기관 흉부 X-ray로 No Finding 외에도 Infiltration, Atelectasis, Effusion 등 다중 라벨 소견이 공존하며(Effusion|Infiltration 5건, Atelectasis|Infiltration 4건 등), CLEAR가 강조하는 개념 단위 설명력과 다병변 동시 발생 처리 방식이 이런 다중 라벨 구조 해석에 참고가 될 수 있다.",
+  "caveat": "우리 데이터는 단일 기관, 153명 규모로 CLEAR가 검증한 4개 대륙 외부 코호트 규모와는 비교가 되지 않아, 우리 데이터만으로는 CLEAR의 기관 간 일반화 성능을 재현하거나 반박할 수 없다.",
+  "check": "CLEAR의 개념 기반 접근을 우리 153명 코호트의 동시발생 소견(Effusion+Infiltration 등)에 적용했을 때 각 개념 기여도가 실제 판독 소견과 일치하는지 확인해볼 수 있는가?"
+}
