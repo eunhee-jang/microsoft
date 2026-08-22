@@ -1,0 +1,15 @@
+{
+  "id": "qoq-med3-multimodal-clinical-foundation-model",
+  "title": "QoQ-Med3: a multimodal reasoning foundation model for clinical analysis",
+  "authors": ["David Dai", "Jeannie She", "Jiaee Cheong", "Xing Han", "Carl Harris", "Haowen Wei", "Farzan Vahedifard", "Suchi Saria", "Robert Stevens", "Paul Liang"],
+  "venue": "npj Digital Medicine",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41746-026-02945-3",
+  "abstract": "Multimodal reasoning-based foundation models (MRFMs) hold considerable promise for addressing key challenges in medical practice, yet their readiness for real-world deployment remains insufficiently explored. To bridge this gap, we developed two MRFMs (QoQ-Med3 and QoQ-Med3-MIMIC) and systematically evaluated their (i) generalizability to previously unseen clinical modalities and tasks, (ii) transferability to held-out datasets collected across different clinical sites, and (iii) robustness to real-world challenges like cross-site heterogeneity. Our results demonstrate that these models can learn transferable representations across modalities, tasks, and heterogeneous clinical datasets. QoQ-Med3 achieves an overall balanced accuracy of 71.3% and a F1 of 0.349, superceding all open-source and closed-source models, including GPT-4o, with particularly pronounced gains in understudied modalities such as ultrasound and mammography. The model trained on public clinical data only generalized to both the held-out MIMIC-IV and the private JHU PMAP dataset collected at Johns Hopkins University hospital. In addition, the extrinsic hallucination rates are reduced by 44.4 percent after training. Collectively, our findings highlight both the potential of multimodal reasoning-based clinical foundation models and the critical next steps required to make them robust and reliable for real-world deployment.",
+  "axes": ["기관 간 일반화", "판독 자동화·워크플로 효율"],
+  "takeaway": "QoQ-Med3는 공개 데이터만으로 학습해도 서로 다른 기관에서 수집된 held-out 데이터셋에 일반화되며, 기존 모델 대비 환각 발생률을 44.4% 낮췄다.",
+  "relevance": "우리 코호트는 5개 기관에서 수집된 이질적 흉부 X-ray 데이터(기관당 48~62건)로, 학습 기관 외부에서의 일반화 가능성이 핵심 관심사다. QoQ-Med3가 보고한 공개 데이터 학습 모델의 타 기관 held-out 데이터 일반화 사례는 우리 데이터처럼 다기관으로 구성된 코호트에서 외부 검증 없이 단일 모델을 적용할 때의 위험과 가능성을 함께 시사한다.",
+  "caveat": "이 연구는 초음파·유방촬영 등 다양한 모달리티를 포괄하는 범용 파운데이션 모델 평가로, 흉부 X-ray 다중 라벨 소견 분류에 특화된 성능은 별도로 보고되지 않아 우리 데이터에 대한 직접적 수치 비교는 어렵다.",
+  "check": "QoQ-Med3 계열 모델을 우리 5개 기관 흉부 X-ray 코호트에 직접 적용했을 때 기관별 균형정확도 편차가 어느 정도인가?"
+}
