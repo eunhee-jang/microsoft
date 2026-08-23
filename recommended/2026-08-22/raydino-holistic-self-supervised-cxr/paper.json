@@ -1,0 +1,26 @@
+{
+  "id": "raydino-holistic-self-supervised-cxr",
+  "title": "Advancing human-centric AI for robust X-ray analysis through holistic self-supervised learning",
+  "authors": [
+    "Théo Moutakanni",
+    "Piotr Bojanowski",
+    "Guillaume Chassagnon",
+    "Céline Hudelot",
+    "Armand Joulin",
+    "Yann LeCun",
+    "Matthew J. Muckley",
+    "Maxime Oquab",
+    "Marie-Pierre Revel",
+    "Maria Vakalopoulou"
+  ],
+  "venue": "Nature Communications",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41467-026-76076-4",
+  "abstract": "Abstract Foundational artificial intelligence models are gaining traction in various applications, including medical fields like radiology. However, medical foundation models are often tested on limited tasks, leaving their generalisability and biases unexplored. Here we introduce RayDINO, a large-scale self-supervised visual encoder for chest X-rays trained on 840,000 images and evaluated on 82,000 images sourced from 12 publicly available datasets. We compare RayDINO to previous state-of-the-art models across nine radiology tasks, from classification and dense segmentation to text generation, and provide an in-depth analysis of population, age and sex biases of our model. Our findings suggest that self-supervision enables patient-centric analysis useful in clinical workflows, allowing for a more holistic interpretation of X-rays. With RayDINO and small task-specific adapters, we reach state-of-the-art results and improve generalization to unseen populations while mitigating bias, illustrating the versatility and robustness of foundation models.",
+  "axes": ["기관 간 일반화", "연령·성별 편향"],
+  "takeaway": "840,000장의 흉부 X-ray로 자기지도학습한 RayDINO 인코더가 9개 방사선 과제에서 최고 수준 성능을 보이면서 인구·연령·성별 편향을 완화한다.",
+  "relevance": "우리 코호트는 5개 기관, 9개 장비에서 수집된 272건이며 연령대가 소아(9세)부터 고령(87세)까지, 남녀 비율이 거의 동등(136:136)해 인구·연령·성별 편향 평가에 적합한 규모다. 다기관·다장비 구성은 RayDINO가 강조하는 일반화·편향 평가 축과 직접 맞물린다.",
+  "caveat": "우리 데이터는 272건 규모로 RayDINO 사전학습·평가 규모(수십만 장)에 크게 못 미쳐, 자체적으로 파운데이션 모델을 재현·검증할 수는 없고 소규모 외부 검증 세트로만 활용 가능하다.",
+  "check": "RayDINO 또는 공개된 어댑터를 우리 5개 기관 하위군에 적용했을 때 기관별 성능 편차가 어느 정도인지 확인해볼 만하다."
+}
