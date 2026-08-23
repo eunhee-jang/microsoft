@@ -1,0 +1,28 @@
+{
+  "id": "medval-llm-report-validation",
+  "title": "Toward expert-level medical text validation with language models",
+  "authors": [
+    "Asad Aali",
+    "Vasiliki Bikia",
+    "Maya Varma",
+    "Nicole Chiou",
+    "Sophie Ostmeier",
+    "Arnav Singhvi",
+    "Magdalini Paschali",
+    "Ashwin Kumar",
+    "Andrew Johnston",
+    "Karimar Amador-Martinez",
+    "Eduardo Guerrero",
+    "Paola Naovi Cruz Rivera"
+  ],
+  "venue": "npj Digital Medicine",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41746-026-03084-5",
+  "abstract": "With the growing use of language models (LMs) in clinical environments, there is an immediate need to evaluate the accuracy of LMs. Detecting errors in LM-generated text is challenging because (1) manual review is costly and (2) expert-composed reference outputs are often unavailable in real-world settings. While the “LLM-as-a-judge” paradigm (a LM evaluating another LM) offers scalable evaluation, even frontier LMs can miss subtle but clinically significant errors. To address these challenges, we propose MedVAL, a novel, self-supervised, data-efficient distillation method that leverages synthetic data to train evaluator LMs to assess whether LM-generated medical outputs are factually consistent with inputs, without requiring physician labels or reference outputs. To evaluate LM performance, we introduce MedVAL-Bench, a dataset of 840 physician-annotated outputs across 6 diverse clinical use cases capturing real-world challenges. Each output is reviewed following a physician-defined taxonomy of risk levels and error categories, enabling evaluation of LMs in making deployment safety decisions. Across 10 state-of-the-art LMs spanning open-source, proprietary, and medically adapted models, MedVAL distillation significantly improves ( p < 0.001) alignment with physicians across seen and unseen tasks, increasing average F1 scores from 66% to 83%. Despite strong baseline performance, MedVAL improves the best-performing proprietary LM (GPT-4o) by 8% without training on physician-labeled data, demonstrating a performance statistically non-inferior to a single human expert on a subset annotated by multiple physicians ( p < 0.001). To support a scalable pathway towards clinical integration, we open-source: (1) Codebase , (2) MedVAL-Bench , (3) MedVAL-4B . Across evaluated tasks, our study provides evidence of LMs approaching expert-level ability in risk-aware validation of LM-generated medical text.",
+  "axes": ["보고서 텍스트 신뢰성 검증"],
+  "takeaway": "MedVAL은 의사 라벨 없이 합성 데이터만으로 학습한 평가용 LM이 10개 최신 LM의 의료 텍스트 사실성 판정 F1을 66%에서 83%로 끌어올리고, 단일 전문의 수준과 비열등함을 보였다.",
+  "relevance": "우리 코호트는 272건 전부에 report_text(판독 보고서)와 clinical_info(임상 정보) 필드를 보유하고 있어, 향후 LM 기반 보고서 생성이나 요약 도구를 도입할 경우 그 출력의 사실적 일관성을 검증할 벤치마크 방법론이 필요하다는 문제의식과 직접 맞물린다.",
+  "caveat": "MedVAL-Bench는 흉부 X-ray 소견과 무관한 6개 임상 과제로 구성되어, 우리 코호트의 실제 판독 보고서에 대한 오류 탐지 성능을 그대로 대변하지는 못한다.",
+  "check": "MedVAL류 평가자 LM을 우리 report_text 표본 일부에 적용했을 때 방사선과 소견 누락이나 과다 서술을 얼마나 잘 잡아내는지 파일럿 검증이 필요하다."
+}
